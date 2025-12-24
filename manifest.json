@@ -1,0 +1,14 @@
+{
+  "manifest_version": 3,
+  "name": "WAYNE CORE",
+  "version": "29.0",
+  "permissions": ["storage"],
+  "action": { "default_popup": "popup.html" },
+  "content_scripts": [
+    {
+      "matches": ["*://*.youtube.com/*"],
+      "js": ["content.js"],
+      "run_at": "document_end"
+    }
+  ]
+}
