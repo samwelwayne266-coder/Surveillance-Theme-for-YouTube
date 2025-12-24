@@ -20,7 +20,7 @@
 ## 🚀 Installation
 
 ### Developer Mode (Manual)
-1. Clone this repository: `git clone https://github.com/YOUR_USERNAME/WAYNE_CORE.git`
+1. Clone this repository: `git clone https://github.com/samwelwayne266-coder/WAYNE_CORE.git`
 2. Open Chrome and navigate to `chrome://extensions/`
 3. Enable **Developer Mode** (toggle in the top right).
 4. Click **Load unpacked** and select the `WAYNE_CORE` project folder.
