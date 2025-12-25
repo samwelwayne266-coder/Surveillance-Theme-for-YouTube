@@ -1,50 +1,35 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <style>
-    :root { --hacker-col: #00ccff; }
-    body {
-      font-family: 'Courier New', monospace; width: 350px; margin: 0;
-      background: #000; color: var(--hacker-col); border: 2px solid var(--hacker-col);
-      overflow: hidden;
-    }
-    .header {
-      padding: 15px; text-align: center; font-size: 18px; font-weight: bold;
-      border-bottom: 2px solid var(--hacker-col); letter-spacing: 5px;
-      background: rgba(0, 204, 255, 0.1); text-shadow: 0 0 10px var(--hacker-col);
-    }
-    .container { padding: 20px; }
-    .option { display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px; }
-    .dot-grid { display: flex; justify-content: space-around; margin: 20px 0; }
-    .dot { width: 25px; height: 25px; border-radius: 2px; cursor: pointer; border: 1px solid #333; transition: 0.2s; }
-    .dot:hover { transform: scale(1.2); border-color: #fff; }
-    button {
-      width: 100%; background: transparent; color: var(--hacker-col);
-      border: 1px solid var(--hacker-col); padding: 12px; cursor: pointer;
-      font-weight: bold; font-family: 'Courier New'; margin-top: 10px;
-      text-transform: uppercase;
-    }
-    button:hover { background: var(--hacker-col); color: #000; box-shadow: 0 0 20px var(--hacker-col); }
-    .status { font-size: 9px; text-align: center; margin-top: 10px; opacity: 0.5; letter-spacing: 1px; }
-  </style>
+    <style>
+        :root { --theme: #00ccff; }
+        body {
+            width: 250px; background: #000; color: var(--theme);
+            font-family: 'Courier New', monospace; margin: 0; padding: 15px;
+            border: 2px solid var(--theme); text-transform: uppercase;
+            overflow: hidden; position: relative;
+        }
+        body::after {
+            content: ""; position: absolute; top: 0; left: 0; width: 100%; height: 2px;
+            background: var(--theme); opacity: 0.3; animation: scan 3s linear infinite;
+        }
+        @keyframes scan { 0% { top: 0; } 100% { top: 100%; } }
+        .header { font-size: 18px; font-weight: 900; border-bottom: 1px solid var(--theme); padding-bottom: 5px; margin-bottom: 15px; letter-spacing: 2px; text-shadow: 0 0 8px var(--theme); }
+        .btn { width: 100%; background: transparent; border: 1px solid var(--theme); color: var(--theme); padding: 10px; cursor: pointer; font-weight: bold; margin-top: 10px; font-family: inherit; }
+        .btn:hover { background: var(--theme); color: #000; box-shadow: 0 0 15px var(--theme); }
+        .panic { border-color: #ff0000; color: #ff0000; margin-top: 20px; }
+        .panic:hover { background: #ff0000; color: #fff; box-shadow: 0 0 15px #ff0000; }
+        input[type=range] { width: 100%; background: transparent; cursor: pointer; accent-color: var(--theme); }
+        .footer { font-size: 8px; margin-top: 15px; opacity: 0.6; text-align: center; }
+    </style>
 </head>
 <body>
-  <div class="header">WAYNE_OS_v20</div>
-  <div class="container">
-    <div class="option"><span>GHOST_SEARCH</span><input type="checkbox" id="focusToggle" checked></div>
-    <div class="option"><span>UI_HIJACK</span><input type="checkbox" id="brandToggle" checked></div>
-    <div class="option"><span>AUDIO_PROC</span><input type="checkbox" id="audioToggle" checked></div>
-    
-    <div class="dot-grid">
-      <div class="dot" style="background:#ff0000" data-color="#ff0000"></div>
-      <div class="dot" style="background:#00ccff" data-color="#00ccff"></div>
-      <div class="dot" style="background:#00ff00" data-color="#00ff00"></div>
-      <div class="dot" style="background:#ffffff" data-color="#ffffff"></div>
-    </div>
-    
-    <button id="saveBtn">COMMIT_OVERRIDE</button>
-    <div class="status">SYSTEM_STATUS: COMPROMISED</div>
-  </div>
-  <script src="popup.js"></script>
+    <div class="header">WAYNE_CORE V2</div>
+    <label style="font-size: 10px;">INTERFACE COLOR</label>
+    <input type="range" id="colorPicker" min="0" max="360" value="190">
+    <button class="btn" id="saveBtn">SYNC SETTINGS</button>
+    <button class="btn panic" id="panicBtn">PANIC: DISABLE UI</button>
+    <div class="footer">WAYNE CORE // PROJECT VERSION 2.1</div>
+    <script src="popup.js"></script>
 </body>
 </html>
