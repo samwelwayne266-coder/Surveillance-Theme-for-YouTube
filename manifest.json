@@ -1,6 +1,8 @@
 {
   "manifest_version": 3,
-  "name": "WAYNE_CORE_V2",
+  "author": "samwelwayne266-coder",
+  "name": "Surveillance Theme For YT",
+  "default_locale": "en",
   "version": "2.1",
   "description": "Tactical Surveillance Interface V2.1 - Central Branding",
   "permissions": ["storage", "activeTab", "scripting"],
