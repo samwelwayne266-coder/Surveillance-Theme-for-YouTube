@@ -47,6 +47,34 @@ function applyV21() {
         }
 
         style.innerHTML = `
+/* 1. Kill the sidebar containers entirely */
+#guide, 
+ytd-guide-renderer, 
+#mini-guide, 
+ytd-mini-guide-renderer, 
+#guide-wrapper { 
+    display: none !important; 
+    width: 0 !important;
+}
+
+/* 2. Remove the left margin/padding that usually makes room for the sidebar */
+ytd-app[guide-persistent-and-visible] #page-manager.ytd-app,
+ytd-app[mini-guide-visible] #page-manager.ytd-app {
+    margin-left: 0 !important;
+}
+
+/* 3. Ensure the video grid expands to fill the void */
+#primary.ytd-app, 
+ytd-rich-grid-renderer {
+    margin-left: 0 !important;
+    padding-left: 0 !important;
+    width: 100% !important;
+}
+
+/* 4. Fix top-bar alignment since the menu button is gone */
+ytd-masthead #container.ytd-masthead {
+    padding-left: 16px !important;
+}
             * { border-radius: 0px !important; font-family: 'Courier New', monospace !important; text-transform: uppercase !important; }
             body { background: #000 !important; color: ${theme} !important; transition: filter 0.5s; }
             
@@ -114,12 +142,13 @@ function applyV21() {
             @keyframes scanline-roll { 0% { top: -100%; } 100% { top: 100%; } }
         `;
 
+
         // INJECT BRANDING INTO THE TOP BAR CONTAINER
         const topBar = document.querySelector('ytd-topbar-logo-renderer');
         if (topBar && !document.getElementById('wayne-core-brand')) {
             const b = document.createElement('div');
             b.id = 'wayne-core-brand'; 
-            b.innerText = 'WAYNE_CORE V2';
+            b.innerText = 'WAYNETUBE';
             b.onclick = () => window.location.href = '/';
             topBar.appendChild(b);
         }
