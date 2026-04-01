@@ -1,4 +1,15 @@
 document.addEventListener('DOMContentLoaded', function() {
+// Stealth Mode: Purge last 10 mins of history
+document.getElementById('incognitoBtn').onclick = () => {
+    const tenMinutesAgo = Date.now() - (10 * 60 * 1000);
+    chrome.history.deleteRange({startTime: tenMinutesAgo, endTime: Date.now()}, () => {
+        // Visual feedback in the popup
+        const originalText = document.getElementById('incognitoBtn').innerText;
+        document.getElementById('incognitoBtn').innerText = "PROTOCOL_EXECUTED";
+        setTimeout(() => { document.getElementById('incognitoBtn').innerText = originalText; }, 2000);
+    });
+};
+
     const picker = document.getElementById('colorPicker');
     const saveBtn = document.getElementById('saveBtn');
     const panicBtn = document.getElementById('panicBtn');
