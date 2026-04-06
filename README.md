@@ -1,10 +1,7 @@
 # 🖥️ Surveillance-Theme-for-YouTube
-> **STATUS:** KERNEL_OPERATIONAL  
-> **UPLINK:** ENCRYPTED  
-> **OPERATOR:** samwelwayne266-coder (Wayne Core)
 
 ## ⚡ Overview
-**Surveillance-Interface-for-YouTube** is a comprehensive UI hijacking suite. It strips away the standard consumer interface and replaces it with a high-contrast, tactical surveillance terminal. Designed for minimalist data extraction and high-tech immersion.
+**Surveillance-Interface-for-YouTube** is a comprehensive UI suite. It strips away the standard consumer interface and replaces it with a high-contrast, tactical surveillance terminal. Designed for minimalist data extraction and high-tech immersion.
 
 ---
 
@@ -64,4 +61,3 @@ The core logic resides within the following structure:
 
 ---
 
-**[ END OF TRANSMISSION ]**
