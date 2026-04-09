@@ -16,20 +16,22 @@
 
 ## 🚀 Installation
 
-### Option 1: The Binary Uplink (Easiest)
-1. Go to the [Releases](https://github.com/samwelwayne266-coder/Surveillance-Interface-for-YouTube/releases) page.
-2. Download the `Source code (zip)` from the latest stable release.
-3. Unzip the archive to a permanent location on your drive.
-4. Open Chrome and navigate to `chrome://extensions/`.
-5. Enable **Developer Mode** (toggle in the top right).
-6. Click **Load unpacked** and select the unzipped folder.
+### Option 1: (Easiest)
+1. Download the `Source code (zip)` from the latest stable release.
+2. Unzip the archive to a permanent location on your drive.
+3. Open Chrome and navigate to `chrome://extensions/`.
+4. Enable **Developer Mode** (toggle in the top right).
+5. Click **Load unpacked** and select the unzipped folder.
 
 ### Option 2: Developer Mode (CLI Manual)
 1. Clone this repository: 
-   `git clone https://github.com/samwelwayne266-coder/Surveillance-Interface-for-YouTube.git`
-2. Open Chrome and navigate to `chrome://extensions/`.
-3. Enable **Developer Mode** (toggle in the top right).
-4. Click **Load unpacked** and select the root project folder.
+   ```
+   git clone https://github.com/samwelwayne266-coder/Surveillance-Interface-for-YouTube.git
+   ```
+   
+3. Open Chrome and navigate to `chrome://extensions/`.
+4. Enable **Developer Mode** (toggle in the top right).
+5. Click **Load unpacked** and select the root project folder.
 ---
 
 <p align="center">
